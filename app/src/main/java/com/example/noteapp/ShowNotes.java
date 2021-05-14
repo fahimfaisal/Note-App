@@ -34,13 +34,7 @@ public class ShowNotes extends AppCompatActivity {
         fileList = new ArrayList<>();
 
         fileList = db.fetchAllFiles();
-
-//        fileList.add(new File(0,"how","holololo" ));
-//        fileList.add(new File(1,"how hello","holololo" ));
-//        fileList.add(new File(2,"how hi","holololo" ));
-//
-
-
+        
         SetAdapter();
     }
 
