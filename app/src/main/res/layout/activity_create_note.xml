@@ -4,44 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".CreateNote">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="218dp"
-        android:layout_height="252dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <EditText
+        android:id="@+id/NoteText"
+        android:layout_width="0dp"
+        android:layout_height="339dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/customborder"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:hint="ENTER NOTE TEXT HERE......"
+        app:layout_constraintBottom_toTopOf="@+id/SaveButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.32"
-        app:srcCompat="@android:drawable/ic_menu_save" />
+        app:layout_constraintTop_toBottomOf="@+id/Title" />
 
-    <Button
-        android:id="@+id/CreateNote"
+    <EditText
+        android:id="@+id/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="CREATE A NEW NOTE"
-        app:layout_constraintBottom_toTopOf="@+id/ShowNote"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="ENTER TITLE"
+        app:layout_constraintBottom_toTopOf="@+id/NoteText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        android:onClick="createNote"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/ShowNote"
+        android:id="@+id/SaveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="SHOW ALL NOTES"
+        android:text="SAVE"
+        android:onClick="saveNote"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        android:onClick="showNote"
-        app:layout_constraintTop_toBottomOf="@+id/CreateNote" />
+        app:layout_constraintTop_toBottomOf="@+id/NoteText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
